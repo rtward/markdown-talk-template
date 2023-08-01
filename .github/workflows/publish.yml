@@ -24,8 +24,7 @@ jobs:
         with:
           args: >-
             --slide-level 2
-            -t revealjs
-            --self-contained
+            -t dzslides
             -s talk.md
             -o dist/index.html
 
