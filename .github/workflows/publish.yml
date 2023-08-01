@@ -6,6 +6,9 @@ jobs:
   convert:
     runs-on: ubuntu-22.04
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Make dist Directory
         run: mkdir -p dist
 
@@ -19,7 +22,7 @@ jobs:
             --slide-level 2
             -t revealjs
             -s talk.md
-            -o dst/talk.html
+            -o dist/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2
