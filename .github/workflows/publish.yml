@@ -6,6 +6,10 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+  PAGES_URL: ${{ steps.deployment.outputs.page_url }}
+
 jobs:
   convert:
     runs-on: ubuntu-22.04
@@ -15,6 +19,13 @@ jobs:
 
       - name: Make dist Directory
         run: mkdir -p dist
+
+      - name: Make link QR Code
+        uses: snow-actions/qrcode@v1.0.0
+        with:
+          text: ${{ env.PAGES_URL }}
+          path: 'static/qrcode.png'
+        
 
       - name: Copy static files
         run: cp -r static dist/static
@@ -37,5 +48,5 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
 
-      - name: Print URL
+      - name: Print envs
         run: echo "Deployed To ${{ steps.deployment.outputs.page_url }}"
