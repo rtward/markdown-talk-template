@@ -22,7 +22,7 @@ jobs:
       - name: Make link QR Code
         uses: snow-actions/qrcode@v1.0.0
         with:
-          text: ${{ env.PAGES_URL }}
+          text: ${{ env.REPO_URL }}
           path: 'static/qrcode.png'
         
 
