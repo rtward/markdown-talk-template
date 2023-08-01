@@ -1,0 +1,27 @@
+name: Long Usage
+
+on: push
+
+jobs:
+  convert:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Make dist Directory
+        run: mkdir -p dist
+
+      - name: Copy static files
+        run: cp -r static dist/static
+
+      - name: Build our Talk
+        uses: docker://pandoc/core:2.9
+        with:
+          args: >-
+            --slide-level 2
+            -t revealjs
+            -s talk.md
+            -o dst/talk.html
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: dist
