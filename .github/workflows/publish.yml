@@ -25,6 +25,7 @@ jobs:
           args: >-
             --slide-level 2
             -t revealjs
+            --self-contained
             -s talk.md
             -o dist/index.html
 
