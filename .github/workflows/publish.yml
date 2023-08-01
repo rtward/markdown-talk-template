@@ -2,6 +2,10 @@ name: Long Usage
 
 on: push
 
+permissions:
+  pages: write
+  id-token: write
+
 jobs:
   convert:
     runs-on: ubuntu-22.04
