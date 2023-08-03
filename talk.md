@@ -4,9 +4,13 @@
 
 # First Page
 
-[${TALK_URL}](${TALK_URL})
+- My
+- Talk
+- Outline
 
 # Content Page
+
+Some important info
 
 ::: notes
 
@@ -14,8 +18,20 @@ Some speaker notes here
 
 :::
 
+# Content Page 2
+
+An important image
+
+![](https://placekitten.com/g/200/300)
+
 # Last Page
 
-![Link to Talk](static/qrcode.png)
+Talk Title
 
-[${TALK_URL}](${TALK_URL})
+Your Name <your@email>
+
+![](static/qrcode.png)
+
+Talk: [${TALK_URL}](${TALK_URL})
+
+Repo: [${REPO_URL}](${REPO_URL})
