@@ -47,7 +47,7 @@ jobs:
             --slide-level 2
             --standalone
             -t revealjs
-            -V theme=sky
+            -V theme=night
             -s dist/talk.md
             -o dist/index.html
 

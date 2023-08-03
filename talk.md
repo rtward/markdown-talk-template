@@ -26,8 +26,6 @@ An important image
 
 # Last Page
 
-Talk Title
-
 Your Name <your@email>
 
 ![](static/qrcode.png)
