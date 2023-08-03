@@ -30,7 +30,7 @@ jobs:
         run: cp -r static dist/static
 
       - name: Render vars into talk.md
-        run: cat talk.md | envsubst | dist/talk.md
+        run: cat talk.md | envsubst > dist/talk.md
 
       - name: Build our Talk
         uses: docker://pandoc/core:2.9
