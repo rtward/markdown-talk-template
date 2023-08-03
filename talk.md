@@ -1,6 +1,6 @@
 % Talk Title
 % Your Name <your@email>
-% ${TALK_URL}
+% [${TALK_URL}](${TALK_URL})
 
 # First Page
 
