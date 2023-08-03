@@ -1,6 +1,6 @@
 % Talk Title
 % Your Name <your@email>
-%![](static/qrcode.png)[${TALK_URL}](${TALK_URL})
+%![](static/qrcode.png)<br/>[${TALK_URL}](${TALK_URL})
 
 # First Page
 
