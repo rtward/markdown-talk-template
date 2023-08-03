@@ -8,6 +8,7 @@ permissions:
 
 env:
   REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+  TALK_URL: https://${{ github.actor }}.github.io/${{ github.repository }}
 
 jobs:
   convert:
@@ -23,11 +24,13 @@ jobs:
         uses: snow-actions/qrcode@v1.0.0
         with:
           text: ${{ env.REPO_URL }}
-          path: 'static/qrcode.png'
-        
+          path: "static/qrcode.png"
 
       - name: Copy static files
         run: cp -r static dist/static
+
+      - name: Render vars into talk.md
+        run: cat talk.md | envsubst | dist/talk.md
 
       - name: Build our Talk
         uses: docker://pandoc/core:2.9
@@ -35,7 +38,7 @@ jobs:
           args: >-
             --slide-level 2
             -t dzslides
-            -s talk.md
+            -s dist/talk.md
             -o dist/index.html
 
       - name: Upload Pages artifact
