@@ -52,7 +52,7 @@ jobs:
             -o dist/index.html
 
       - name: Build our Talk PDF
-        uses: docker://pandoc/core:3.1
+        uses: docker://pandoc/latex:3.1
         with:
           args: >-
             -t beamer
