@@ -31,7 +31,7 @@ jobs:
       - name: Make link QR Code
         uses: snow-actions/qrcode@v1.0.0
         with:
-          text: ${{ env.REPO_URL }}
+          text: ${{ env.TALK_URL }}
           path: "static/qrcode.png"
 
       - name: Copy static files
@@ -50,6 +50,14 @@ jobs:
             -V theme=sky
             -s dist/talk.md
             -o dist/index.html
+
+      - name: Build our Talk PDF
+        uses: docker://pandoc/core:3.1
+        with:
+          args: >-
+            -t beamer
+            dist/talk.md
+            -o dist/talk.pdf
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2
