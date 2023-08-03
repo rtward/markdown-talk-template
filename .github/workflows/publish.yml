@@ -51,14 +51,6 @@ jobs:
             -s dist/talk.md
             -o dist/index.html
 
-      - name: Build our Talk PDF
-        uses: docker://pandoc/latex:3.1
-        with:
-          args: >-
-            -t beamer
-            dist/talk.md
-            -o dist/talk.pdf
-
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2
         with:
