@@ -25,9 +25,6 @@ jobs:
       - name: Clone Reveal
         run: git clone https://github.com/hakimel/reveal.js.git 'reveal.js'
 
-      - name: Copy Reveal To Dist
-        run: cp -r reveal.js/dist dist/reveal.js
-
       - name: Make link QR Code
         uses: snow-actions/qrcode@v1.0.0
         with:
@@ -45,6 +42,7 @@ jobs:
         with:
           args: >-
             --slide-level 2
+            -s
             -t revealjs
             -V theme=sky
             -s dist/talk.md

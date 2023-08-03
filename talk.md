@@ -6,7 +6,7 @@
 
 ![Link to Talk](static/qrcode.png)
 
-% ${TALK_URL}
+[${TALK_URL}](${TALK_URL})
 
 # Content Page
 
@@ -20,4 +20,4 @@ Some speaker notes here
 
 ![Link to Talk](static/qrcode.png)
 
-% ${TALK_URL}
+[${TALK_URL}](${TALK_URL})
