@@ -10,9 +10,11 @@
 
 # Content Page
 
----
+::: notes
 
 Some speaker notes here
+
+:::
 
 # Last Page
 
