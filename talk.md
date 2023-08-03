@@ -28,6 +28,8 @@ An important image
 
 ![](https://placekitten.com/g/200/300)
 
+# The End
+
 ---
 
 Your Name <your@email>
