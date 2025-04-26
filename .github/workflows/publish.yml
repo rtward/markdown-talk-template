@@ -17,7 +17,7 @@ jobs:
           echo "TALK_URL=https://${{ github.repository_owner }}.github.io/${REPO_NAME}" >> $GITHUB_ENV
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Make dist Directory
         run: mkdir -p dist
@@ -41,7 +41,7 @@ jobs:
         run: cat talk.md | envsubst > dist/talk.md
 
       - name: Build our Talk
-        uses: docker://pandoc/core:3.1
+        uses: docker://pandoc/core:3.5
         with:
           args: >-
             --slide-level 2
@@ -58,7 +58,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
 
       - name: Print envs
         run: echo "Deployed To ${{ steps.deployment.outputs.page_url }}"
