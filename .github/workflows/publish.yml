@@ -8,6 +8,7 @@ permissions:
 
 jobs:
   convert:
+    name: Convert Markdown to Reveal.js
     runs-on: ubuntu-22.04
     steps:
       - name: Make Envs
