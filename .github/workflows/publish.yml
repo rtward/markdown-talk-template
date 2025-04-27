@@ -29,6 +29,9 @@ jobs:
       - name: Copy Reveal To Dist
         run: cp -r reveal.js dist/
 
+      - name: Copy Favicon To Dist
+        run: cp -r favicon.ico dist/
+
       - name: Make link QR Code
         uses: snow-actions/qrcode@v1.0.0
         with:
