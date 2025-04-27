@@ -48,7 +48,7 @@ jobs:
             --standalone
             -t revealjs
             -V theme=night
-            -V revealjs-url=dist/reveal.js
+            -V revealjs-url=''
             -s dist/talk.md
             -o dist/index.html
 
