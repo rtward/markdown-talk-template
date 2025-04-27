@@ -26,7 +26,7 @@ Some speaker notes here
 
 An important image
 
-![](https://placekitten.com/g/200/300)
+![](https://placecats.com/200/300)
 
 # The End
 
