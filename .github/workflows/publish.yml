@@ -45,7 +45,7 @@ jobs:
         run: cat talk.md | envsubst > dist/talk.md
 
       - name: Build our Talk
-        uses: docker://pandoc/core:3.5
+        uses: docker://pandoc/core:3.9
         with:
           args: >-
             --slide-level 2
